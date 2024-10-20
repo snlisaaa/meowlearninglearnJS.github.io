@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>list belanja harian</title>
+  </head>
+  <body>
+    <h1>list belanja harian</h1>
+    <ul id="list"></ul>
+    <button id="add-list">add list</button>
+    <script>
+      const buttonAdd = document.getElementById("add-list");
+      const list = document.getElementById("list");
+
+      function addList() {
+        const text = prompt("enter your list");
+        const textNode = document.createTextNode(text);
+        const listNode = document.createElement("li");
+
+        listNode.appendChild(textNode);
+        list.appendChild(listNode);
+      }
+
+      buttonAdd.addEventListener("click", addList);
+    </script>
+  </body>
+</html>
